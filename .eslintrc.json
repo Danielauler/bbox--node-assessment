@@ -1,0 +1,91 @@
+{
+	"env": {
+		"es2020": true,
+		"node": true,
+		"jest": true
+	},
+	"extends": [
+		"airbnb-base",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:jest/recommended",
+		"prettier",
+		"prettier/@typescript-eslint",
+		"plugin:prettier/recommended",
+		"plugin:security/recommended"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"jest",
+		"security",
+		"import-helpers",
+		"eslint-plugin-import-helpers"
+	],
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		},
+		"import/resolver": {
+			"typescript": {
+				"alwaysTryTypes": true
+			}
+		}
+	},
+
+	"rules": {
+		"indent": [
+			"error",
+			"tab",
+			{ "SwitchCase": 1, "ignoredNodes": ["JSXElement"] }
+		],
+		"no-console": "off",
+		"no-tabs": "off",
+		"camelcase": "off",
+		"no-case-declarations": "off",
+		"import/extensions": "off",
+		"no-shadow": "off",
+		"comma-dangle": [
+			"error",
+			{
+				"arrays": "never",
+				"objects": "never",
+				"imports": "never",
+				"exports": "never",
+				"functions": "never"
+			}
+		],
+		"prettier/prettier": "off",
+		"no-return-assign": "off",
+		"no-await-in-loop": "off",
+		"import/named": "off",
+		"global-require": "off",
+		"new-cap": "off",
+		"@typescript-eslint/no-var-requires": "off",
+		"no-unused-expressions": "off",
+		"no-restricted-syntax": "off",
+		"import/no-dynamic-require": "off",
+		"class-methods-use-this": "off",
+		"no-underscore-dangle": "off",
+		"import/no-named-default": "off",
+		"import/prefer-default-export": "off",
+		"security/detect-object-injection": "off",
+		"import-helpers/order-imports": [
+			"error",
+			{
+				"newlinesBetween": "always",
+				"groups": ["module", "/^@/", ["parent", "sibling", "index"]],
+				"alphabetize": { "order": "asc", "ignoreCase": true }
+			}
+		],
+		"jest/no-test-callback": "off"
+	}
+}

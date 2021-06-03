@@ -3,13 +3,30 @@
     "rootDir": "src",
     "outDir": "build",
     "lib": ["es5", "es6"],
-    "target": "es5",
+    "target": "ES6",
     "moduleResolution": "node",
     "module": "commonjs",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
-  }
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+			"@root/*": ["./*"],
+			"@exceptions": ["./src/exceptions"],
+			"@email/*": ["./src/email/*"],
+			"@config/*": ["./src/config/*"],
+			"@docs/*": ["./src/docs/*"],
+			"@shared/*": ["./src/shared/*"],
+			"@helpers/*": ["./src/helpers/*"],
+			"@interfaces": ["./src/interfaces"],
+			"@locale/*": ["./src/locale/*"],
+			"@main/*": ["./src/main/*"],
+			"@resources/*": ["./src/resources/*"],
+			"@traits/*": ["./src/traits/*"],
+			"@providers/*": ["./src/providers/*"]
+		}
+  },
+  "exclude": ["node_modules"]
 }

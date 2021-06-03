@@ -1,2 +1,11 @@
 node_modules/
 yarn.lock
+dist/
+deploy/
+db/
+.env
+staticfiles/edicts/*
+staticfiles/profile/*
+static_files/*
+.DS_Store
+*/**/.DS_Store
