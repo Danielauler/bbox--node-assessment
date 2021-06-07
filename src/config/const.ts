@@ -14,10 +14,6 @@ export const LANG: ILanguages =
 	lang === 'ptBr' || lang === 'en' ? lang : 'ptBr';
 export const PORT: number = parseInt(process.env.PORT || '5001', 10);
 
-export const MONGO_DATABASE: string = process.env.MONGO_DATABASE || '';
-export const MONGO_URI: string = process.env.MONGO_URI || '';
-export const FRONT_URL: string = process.env.FRONT_URL || '';
-
 export const MESSAGE_TYPE = {
 	error: 'ERROR',
 	warning: 'WARNING',

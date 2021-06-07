@@ -15,16 +15,14 @@
     "paths": {
 			"@root/*": ["./*"],
 			"@exceptions": ["./src/exceptions"],
-			"@email/*": ["./src/email/*"],
+			"@entity/*": ["./src/entity/*"],
 			"@config/*": ["./src/config/*"],
 			"@docs/*": ["./src/docs/*"],
-			"@shared/*": ["./src/shared/*"],
 			"@helpers/*": ["./src/helpers/*"],
 			"@interfaces": ["./src/interfaces"],
 			"@locale/*": ["./src/locale/*"],
 			"@main/*": ["./src/main/*"],
 			"@resources/*": ["./src/resources/*"],
-			"@traits/*": ["./src/traits/*"],
 			"@providers/*": ["./src/providers/*"]
 		}
   },

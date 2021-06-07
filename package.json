@@ -1,25 +1,64 @@
 {
   "name": "bb-api-evaluation",
+  "displayName": "bb-api-evaluation",
   "version": "1.0.0",
   "description": "",
+  "license": "MIT",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.9",
+    "@types/jest": "^26.0.23",
+    "@types/morgan": "^1.9.2",
     "@types/node": "^8.0.29",
+    "@types/swagger-jsdoc": "^6.0.0",
+    "@types/swagger-ui-express": "^4.1.2",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.4",
+    "lint-staged": "^11.0.0",
     "nodemon": "^2.0.6",
+    "prettier": "^2.3.1",
     "ts-node": "3.3.0",
-    "typescript": "3.3.3333"
+    "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.3.2"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
     "pg": "^8.4.0",
     "reflect-metadata": "^0.1.10",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6",
     "typeorm": "0.2.29",
     "uuid": "^8.3.2"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
   "scripts": {
-    "start:dev": "nodemon",
+    "dev": "nodemon src/index.ts",
+    "lint": "yarn prettier:format && yarn eslint:fix",
+    "eslint:fix": "eslint './src/**/*.{js,ts,tsx}' --config .eslintrc.json --fix",
+    "prettier:format": "prettier-eslint --write './src/**/*.{js,ts,tsx}'",
+    "type": "tsc --sourceMap false -p ./tsconfig.json",
+    "develop": "ts-node-dev --inspect=0.0.0.0:7001 --exit-child --debug --trace-warnings --ignore-watch node_modules --project tsconfig.json -r tsconfig-paths/register ./src/index.ts",
     "build": "tsc",
     "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
   }
