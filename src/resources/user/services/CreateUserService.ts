@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import { IService } from '@interfaces';
-import { NotFoundException, ValidationException } from '@exceptions';
+import { ValidationException } from '@exceptions';
 import User, { UserRole, UserEvent } from '@entity/User'
 import { IUser } from '../interfaces/IUser';
 import { UserModel } from "../UserModel";

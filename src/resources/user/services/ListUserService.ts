@@ -1,5 +1,3 @@
-import { getRepository } from 'typeorm';
-
 import { IListServiceReturn, IService } from '@interfaces';
 
 import { IUser } from '../interfaces/IUser';

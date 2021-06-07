@@ -1,4 +1,4 @@
-import type { Response, Request } from 'express';
+import type { Response } from 'express';
 import { BadRequestException } from '@exceptions';
 
 import { HttpStatusCode } from '@config/const';

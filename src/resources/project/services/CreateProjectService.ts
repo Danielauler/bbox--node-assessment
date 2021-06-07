@@ -1,7 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import { LANG } from '@config/const';
 import {
-	ValidationException,
 	BadRequestException,
 	NotFoundException
 } from '@exceptions';
@@ -11,9 +10,8 @@ import Project from '@entity/Project'
 import User from '@entity/User'
 
 import { IProject, ProjectRequestBody } from '../interfaces/IProject';
-import { ProjectModel } from '../ProjectModel';
-import { IUser, IUserId } from '../../user/interfaces/IUser';
-import { UserModel } from "../../user/UserModel";
+import { IUserId } from '../../user/interfaces/IUser';
+
 
 class CreateProductService implements IService {
 	getOwner = async (owner_id?: string): Promise<IUserId> => {
